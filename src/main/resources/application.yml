@@ -1,0 +1,35 @@
+spring:
+  batch:
+    job:
+      enabled: false
+  datasource:
+    url: jdbc:h2:mem:test
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  # Enabling H2 Console
+  h2:
+    console:
+      enabled: true
+    # Custom H2 Console URL
+    path: /h2
+    settings:
+      web-allow-others: true
+  liquibase:
+    change-log: classpath:/db/changelog-master.xml
+
+logging:
+  level:
+    liquibase: INFO
+###### constants #######
+constants:
+  header:
+    names: lastName,firstName,email,address
+  line:
+    delimiter: ","
+

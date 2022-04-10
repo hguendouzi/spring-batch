@@ -1,0 +1,7 @@
+###### constants #######
+constants:
+  header:
+    names: lastName,firstName,email,address
+  line:
+    delimiter: ","
+
